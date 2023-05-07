@@ -25,19 +25,24 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand"  style="max-height: 50px"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <img class="image-app" src="{% static 'image/badminton.png' %}" width="50" height="50">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" >Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" ></a>
+            <a class="nav-link" >Daftar Atlet</a>
           </li>
-         
+          <li class="nav-item">
+            <a class="nav-link" >Lihat Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" >Hasil Pertandingan</a>
+          </li>
         </ul>
         <ul class="navbar-nav right-section d-flex justify-content-end"></ul>
 
@@ -45,9 +50,8 @@
               <strong><a class="nav-link" >Hi, {{user.username}}!</a></strong>
             </li>
             <li class="nav-item">
-				   
+                       
 					    <button type="button" class="btn-white">Logout</button>
-				      </a>
 			      </li>
            
 			    
@@ -79,6 +83,15 @@
   text-decoration: none;
 }
 
+.navbar button {
+  float: left;
+  font-size: 16px;
+  color: rgb(192, 78, 78);
+  text-align: center;
+  padding: 10px 18px;
+  text-decoration: none;
+}
+
 /* The dropdown container */
 .dropdown {
   float: left;
@@ -98,7 +111,7 @@
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .dropbtn, button:hover {
   background-color: red;
 }
 
