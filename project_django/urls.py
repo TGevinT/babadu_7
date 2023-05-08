@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('example_app.urls')),
     path('atlet/', include('atlet.urls')),
     path('umpire/', include('umpire.urls')),
+     path('pelatih/', include('pelatih.urls')),
 ]

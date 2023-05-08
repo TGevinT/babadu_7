@@ -60,60 +60,80 @@
   </nav>
   
 
-  <div class="stopwatch-container">
-    <div class="stopwatch">
-        <h2>Pertandingan Perempat Final&#127992</h2>
-        <h3>Tim A vs Tim C</h3>
-        <h4>Tio & Tommy vs Roni & Rio</h4>
-        <p><span id="seconds">00</span>:<span id="tens">00</span></p>
-        <button class="card-btn" id="button-start">Start</button>
-        <button class="card-btn" id="button-stop">Stop</button>
-        <h4></h4>
-       
-        <button class="btn-lanjut" onclick="location.href='/umpire/semifinal'">Pertandingan Selanjutnya</button>
+  <div class="hasil">
+    <div class="hasilnya">
+        <h2> Hasil Pertandingan Indonesia Open 2023</h2>
+        
+        <table>
+            <tr>
+                <th>Nama Event</th>
+                <td>Indonesia Open 2023</td>
+            </tr>
+            <tr>
+                <th>Stadium</th>
+                <td>Istora Gelora Bung Karno (GBK) Senayan</td>
+            </tr>
+            <tr>
+                <th>Hadiah</th>
+                <td>Rp 300.000.000,00</td>
+            </tr>
+            <tr>
+                <th>Kategori Superseries</th>
+                <td>Super 1000</td>
+            </tr>
+            <tr>
+                <th>Tanggal Mulai</th>
+                <td>13 Juni 2023</td>
+            </tr>
+            <tr>
+                <th>Tanggal Selesai</th>
+                <td>18 Juni 2023</td>
+            </tr>
+            <tr>
+                <th>Kapasitas</th>
+                <td>2.000 orang</td>
+            </tr>
+        </table>
+        <div class="container">
+            <table class="center">
+              <thead>
+                <tr>
+                  <th>Tahap</th>
+                  <th>Nama Tim</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Juara 1</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Juara 2</td>
+                  <td>G</td>
+                </tr>
+                <tr>
+                  <td>Juara 3</td>
+                  <td>D</td>
+                </tr>
+                <tr>
+                  <td>Semifinal</td>
+                  <td>E</td>
+                </tr>
+                <tr>
+                  <td>Perempat Final</td>
+                  <td>C <br><br> F <br><br> B <br><br> H</td>
+                </tr>
+               
+              </tbody>
+            </table>
+          </div>
+          
 
     </div>
    
    </div> 
 
 
-
-    <!-- <div class="container">
-    <h1>Pertandingan</h1>
-    <div class="match">
-      <h2>Pertandingan 1</h2>
-      <p>Tim A vs Tim B</p>
-      <div class="timer">Waktu: <span id="timer1">0</span> detik</div>
-      <button id="start1">Start</button>
-    </div>
-    <div class="match">
-      <h2>Pertandingan 2</h2>
-      <p>Tim C vs Tim D</p>
-      <div class="timer">Waktu: <span id="timer2">0</span> detik</div>
-      <button id="start2">Start</button>
-    </div>
-    <div class="match">
-      <h2>Pertandingan 3</h2>
-      <p>Tim E vs Tim F</p>
-      <div class="timer">Waktu: <span id="timer3">0</span> detik</div>
-      <button id="start3">Start</button>
-    </div>
-    <div class="match">
-      <h2>Pertandingan 4</h2>
-      <p>Tim G &amp; Tim H vs Tim I &amp; Tim J</p>
-      <div class="timer">Waktu: <span id="timer4">0</span> detik</div>
-      <button id="start4">Start</button>
-    </div>
-  </div>
-  <script>
-    // ambil tombol start dan elemen span untuk menampilkan waktu
-    var startBtn1 = document.getElementById("start1");
-    var timer1 = document.getElementById("timer1");
-    var startBtn2 = document.getElementById -->
-     
-
-      
-     
 
   </div>
 
@@ -125,71 +145,32 @@
 
 </body>
 
-<script>
-    window.onload = function () {
-  
-  var seconds = 00; 
-  var tens = 00; 
-  var appendTens = document.getElementById("tens")
-  var appendSeconds = document.getElementById("seconds")
-  var buttonStart = document.getElementById('button-start');
-  var buttonStop = document.getElementById('button-stop');
-  var buttonReset = document.getElementById('button-reset');
-  var Interval ;
 
-  buttonStart.onclick = function() {
-    
-    clearInterval(Interval);
-     Interval = setInterval(startTimer, 10);
-  }
-  
-    buttonStop.onclick = function() {
-       clearInterval(Interval);
-  }
-  
-
-  buttonReset.onclick = function() {
-     clearInterval(Interval);
-    tens = "00";
-  	seconds = "00";
-    appendTens.innerHTML = tens;
-  	appendSeconds.innerHTML = seconds;
-  }
-  
-   
-  
-  function startTimer () {
-    tens++; 
-    
-    if(tens <= 9){
-      appendTens.innerHTML = "0" + tens;
-    }
-    
-    if (tens > 9){
-      appendTens.innerHTML = tens;
-      
-    } 
-    
-    if (tens > 99) {
-      console.log("seconds");
-      seconds++;
-      appendSeconds.innerHTML = "0" + seconds;
-      tens = 0;
-      appendTens.innerHTML = "0" + 0;
-    }
-    
-    if (seconds > 9){
-      appendSeconds.innerHTML = seconds;
-    }
-  
-  }
-  
-
-}
-</script>
 <style>
+    
+table {
+    border-collapse: collapse;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #e4d8d8;
+}
+
+th {
+    background-color: #35312c;
+    color: white;
+}
 .btn-lanjut {
-    display: inline-block; 
+display: inline-block; 
   background-color: #38ae7d;
   border: 2px solid #38ae7d; 
   border-radius: 5px;
@@ -198,10 +179,10 @@
   padding: 7px 12px;
   font-weight: 600;
 }
-.stopwatch {
+.hasilnya {
     text-align: center;
 }
-.stopwatch-container {
+.hasil {
   flex-direction: row; /* menampilkan card secara horizontal */
   justify-content: space-between; /* menentukan jarak antar card */
   width: 90%;

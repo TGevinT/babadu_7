@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'example_app',
     'atlet',
     'umpire',
+    'pelatih',
 ]
 
 MIDDLEWARE = [
