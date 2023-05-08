@@ -60,60 +60,21 @@
   </nav>
   
 
-  <div class="stopwatch-container">
-    <div class="stopwatch">
-        <h2>Pertandingan Perempat Final&#127992</h2>
-        <h3>Tim A vs Tim C</h3>
-        <h4>Tio & Tommy vs Roni & Rio</h4>
-        <p><span id="seconds">00</span>:<span id="tens">00</span></p>
-        <button class="card-btn" id="button-start">Start</button>
-        <button class="card-btn" id="button-stop">Stop</button>
-        <h4></h4>
+  <div class="hasil">
+    <div class="hasilnya">
+        <h2> ✨ Congratulations! &#x1f389</h2>
+        <h3>Juara 1: Tim A (Tio & Tommy)</h3>
+        <h3>Juara 2: Tim G (Roni & John)</h3>
+        <h3>Juara 3: Tim D (Rome & Jason)</h3>
+        <button class="btn-lanjut" onclick="location.href='/umpire/hasil_pertandingan'">Done </button>
+        
        
-        <button class="btn-lanjut" onclick="location.href='/umpire/semifinal'">Pertandingan Selanjutnya</button>
 
     </div>
    
    </div> 
 
 
-
-    <!-- <div class="container">
-    <h1>Pertandingan</h1>
-    <div class="match">
-      <h2>Pertandingan 1</h2>
-      <p>Tim A vs Tim B</p>
-      <div class="timer">Waktu: <span id="timer1">0</span> detik</div>
-      <button id="start1">Start</button>
-    </div>
-    <div class="match">
-      <h2>Pertandingan 2</h2>
-      <p>Tim C vs Tim D</p>
-      <div class="timer">Waktu: <span id="timer2">0</span> detik</div>
-      <button id="start2">Start</button>
-    </div>
-    <div class="match">
-      <h2>Pertandingan 3</h2>
-      <p>Tim E vs Tim F</p>
-      <div class="timer">Waktu: <span id="timer3">0</span> detik</div>
-      <button id="start3">Start</button>
-    </div>
-    <div class="match">
-      <h2>Pertandingan 4</h2>
-      <p>Tim G &amp; Tim H vs Tim I &amp; Tim J</p>
-      <div class="timer">Waktu: <span id="timer4">0</span> detik</div>
-      <button id="start4">Start</button>
-    </div>
-  </div>
-  <script>
-    // ambil tombol start dan elemen span untuk menampilkan waktu
-    var startBtn1 = document.getElementById("start1");
-    var timer1 = document.getElementById("timer1");
-    var startBtn2 = document.getElementById -->
-     
-
-      
-     
 
   </div>
 
@@ -198,10 +159,10 @@
   padding: 7px 12px;
   font-weight: 600;
 }
-.stopwatch {
+.hasilnya {
     text-align: center;
 }
-.stopwatch-container {
+.hasil {
   flex-direction: row; /* menampilkan card secara horizontal */
   justify-content: space-between; /* menentukan jarak antar card */
   width: 90%;
