@@ -114,23 +114,50 @@
       </div>
     </div>
   </nav>
-        <h1 >FORM DATA KUALIFIKASI</h1>
-        
-        <form method="post" action="pertanyaan_kualifikasi/">
-            {% csrf_token %}
-            <label for="nomor_batch">Nomor Batch:</label>
-            <input type="text" id="nomor_batch" name="nomor_batch" required>
-            <label for="tempat_pelaksanaan">Tempat Pelaksanaan:</label>
-            <select id="tempat_pelaksanaan" name="tempat_pelaksanaan">
-                <option></option>
-            </select>
-            <label for="tanggal_pelaksanaan">Tanggal pelaksanaan:</label>
-            <select id="tanggal_pelaksanaan" name="tanggal_pelaksanaan">
-                <option></option>
-            </select>
-            <br><br>
-            <input type="submit" value="NEXT">
-        </form>
+  <h1 >PERTANYAAN KUALIFIKASI</h1>
+  <form method="post">
+    {% csrf_token %}
+    <p>Question 1</p>
+    <input type="radio" id="q1c1" name="q1" value="c1">
+    <label for="q1c1">Choice 1</label><br>
+    <input type="radio" id="q1c2" name="q1" value="c2">
+    <label for="q1c2">Choice 2</label><br>
+    <input type="radio" id="q1c3" name="q1" value="c3">
+    <label for="q1c3">Choice 3</label><br>
+
+    <p>Question 2</p>
+    <input type="radio" id="q2c1" name="q2" value="c1">
+    <label for="q2c1">Choice 1</label><br>
+    <input type="radio" id="q2c2" name="q2" value="c2">
+    <label for="q2c2">Choice 2</label><br>
+    <input type="radio" id="q2c3" name="q2" value="c3">
+    <label for="q2c3">Choice 3</label><br>
+          
+    <p>Question 3</p>
+    <input type="radio" id="q2c1" name="q2" value="c1">
+    <label for="q2c1">Choice 1</label><br>
+    <input type="radio" id="q2c2" name="q2" value="c2">
+    <label for="q2c2">Choice 2</label><br>
+    <input type="radio" id="q2c3" name="q2" value="c3">
+    <label for="q2c3">Choice 3</label><br>
+
+    <p>Question 4</p>
+    <input type="radio" id="q2c1" name="q2" value="c1">
+    <label for="q2c1">Choice 1</label><br>
+    <input type="radio" id="q2c2" name="q2" value="c2">
+    <label for="q2c2">Choice 2</label><br>
+    <input type="radio" id="q2c3" name="q2" value="c3">
+    <label for="q2c3">Choice 3</label><br>
+
+    <p>Question 5</p>
+    <input type="radio" id="q2c1" name="q2" value="c1">
+    <label for="q2c1">Choice 1</label><br>
+    <input type="radio" id="q2c2" name="q2" value="c2">
+    <label for="q2c2">Choice 2</label><br>
+    <input type="radio" id="q2c3" name="q2" value="c3">
+    <label for="q2c3">Choice 3</label><br><br>
+     <input type="submit" value="NEXT">
+  </form>
     </body>
     <style>
         .navbar {

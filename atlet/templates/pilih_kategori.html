@@ -1,44 +1,35 @@
-
 {% load static %}
 <!DOCTYPE html>
 <html>
-    
     <head>
-        <title>Tes Kualifikasi</title>
+        <title> Daftar Event</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
-                background-color: #030303;
+                background-color: #000000;
             }
             h1 {
                 text-align: center;
             }
-            form {
-                width: 35%;
+            table {
+                width: 50%;
                 margin: 0 auto;
+                border-collapse: collapse;
                 background-color: #fff;
-                padding: 20px;
                 border-radius: 10px;
+                border-collapse: collapse;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             }
-            input[type="text"], select {
-                width: 100%;
-                padding: 5px 5px;
-                margin: 8px 0;
-                box-sizing: border-box;
-                border: 2px solid #ccc;
-                border-radius: 4px;
+            th, td {
+                padding: 5px;
+                text-align: left;
+                border: 1px solid black;
+                border-bottom: 1px solid #ddd;
             }
-            input[type="submit"] {
+            th {
                 background-color: #38ae7d;
-                color: #fff;
-                padding: 5px 20px;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-                width: 100%;
-            }
-            input[type="submit"]:hover {
-                background-color: #38ae7d;
+                color: white;
+                border: 1px solid black;
             }
         </style>
         <meta charset="UTF-8">
@@ -59,10 +50,8 @@
         {% block meta %}
         {% endblock meta %}
     </head>
-    
-    
-<body>
-  <!-- Navbar -->
+    <body>
+        <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
    
@@ -103,7 +92,7 @@
         <ul class="navbar-nav right-section d-flex justify-content-end"></ul>
 
             <li class="nav-item">
-              <strong><a class="nav-link" >Welcome Back, Atlet!</a></strong>
+              <strong><a class="nav-link" >Welcome Back</a></strong>
             </li>
             <li class="nav-item">
                        
@@ -114,23 +103,53 @@
       </div>
     </div>
   </nav>
-        <h1 >FORM DATA KUALIFIKASI</h1>
+        <h1>Pilih Kategori</h1>
+        <h6 style="text-align: center;">Event: EventA</h6>
+        <h6 style="text-align: center;">Hadiah: Rp 5.000.000</h6>
+        <h6 style="text-align: center;"> Tanggal Mulai: 12-04-2023</h6>
+        <h6 style="text-align: center;">Tanggal Selesai: 15-04-2023</h6>
+        <h6 style="text-align: center;">Kategori: S200</h6>
+        <h6 style="text-align: center;">Kapasitas: 50/64</h6>
+        <h6 style="text-align: center;">Stadium: GBK</h6>
+        <h6 style="text-align: center;">Negara Indonesia</h6>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Kategori</th>
+                    <th>Partner</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Tunggal Putra</td>
+                    <td>-</td>
+                    <td> <a >
+                        join
+                      </a></td>
+                  </tr>
+                  <tr>
+                    <td>Ganda Putra</td>
+                    <td><select><option >Sponsor 1</option>
+                        <option >Sponsor 2</option></select></td>
+                    <td> <a >
+                        join
+                      </a></td>
+                  </tr>
+
+                  <tr>
+                    <td>Ganda Campuran</td>
+                    <td><select><option >Sponsor 1</option>
+                        <option >Sponsor 2</option></select></td>
+                    <td> <a >
+                        join
+                      </a></td>
+                  </tr>
+            </thead>
+            
+        </table>
+
+       
+            
         
-        <form method="post" action="pertanyaan_kualifikasi/">
-            {% csrf_token %}
-            <label for="nomor_batch">Nomor Batch:</label>
-            <input type="text" id="nomor_batch" name="nomor_batch" required>
-            <label for="tempat_pelaksanaan">Tempat Pelaksanaan:</label>
-            <select id="tempat_pelaksanaan" name="tempat_pelaksanaan">
-                <option></option>
-            </select>
-            <label for="tanggal_pelaksanaan">Tanggal pelaksanaan:</label>
-            <select id="tanggal_pelaksanaan" name="tanggal_pelaksanaan">
-                <option></option>
-            </select>
-            <br><br>
-            <input type="submit" value="NEXT">
-        </form>
     </body>
     <style>
         .navbar {

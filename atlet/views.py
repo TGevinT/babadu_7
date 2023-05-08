@@ -29,6 +29,17 @@ def form_kualifikasi(request):
 def pertanyaan_kualifikasi(request):
     return render(request, 'pertanyaan_kualifikasi.html')
 
+def daftar_sponsor(request):
+    return render(request, 'daftar_sponsor.html')
+
+def daftar_event(request):
+    return render(request, 'daftar_event.html')
+
+def daftar_event_lanjut(request):
+    return render(request, 'daftar_event_lanjut.html')
+
+def pilih_kategori(request):
+    return render(request, 'pilih_kategori.html')
 
 def list_atlet(request):
     atlet_list = Atlet.objects.all()
@@ -44,3 +55,5 @@ def create_dummy_data():
 
 def dash_atlet(request):
     return render(request, 'atlet.html')
+
+
