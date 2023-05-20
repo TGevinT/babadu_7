@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form for Coach</title>
+    <style>
+      /* Styling untuk mengatur penempatan konten */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      /* Styling untuk input field */
+      input[type="text"], input[type="email"], input[type="date"] {
+        padding: 10px;
+        margin: 5px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      /* Styling untuk tombol */
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 10px;
+      }
+      /* Styling untuk tombol ketika di-hover */
+      button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2 style="text-align: center;">FORM REGISTRASI PELATIH</h2>
+      <label for="name">Nama:</label>
+      <input type="text" id="name" name="name" placeholder="Masukkan Nama Anda">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Masukkan Email Anda">
+      <label for="country">Negara:</label>
+      <input type="text" id="country" name="country" placeholder="Masukkan Negara Anda">
+      <label for="category">Kategori:</label><br>
+      <input type="checkbox" id="tunggal_putra" name="category[]" value="tunggal putra">
+      <label for="tunggal_putra">Tunggal Putra</label><br>
+      <input type="checkbox" id="tunggal_putri" name="category[]" value="tunggal putri">
+      <label for="tunggal_putri">Tunggal Putri</label><br>
+      <input type="checkbox" id="ganda_putra" name="category[]" value="ganda putra">
+      <label for="ganda_putra">Ganda Putra</label><br>
+      <input type="checkbox" id="ganda_putri" name="category[]" value="ganda putri">
+      <label for="ganda_putri">Ganda Putri</label><br>
+      <input type="checkbox" id="ganda_campuran" name="category[]" value="ganda campuran">
+      <label for="ganda_campuran">Ganda Campuran</label><br>
+      <label for="start_date">Tanggal Mulai:</label>
+      <input type="date" id="start_date" name="start_date">
+      <button type="submit" style="display: block; margin: 0 auto;">Daftar</button>
+    </form>
+  </body>
+</html>

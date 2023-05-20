@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form - Athlete</title>
+    <style>
+      /* Styling untuk mengatur penempatan konten */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      /* Styling untuk input field */
+      input[type="text"], input[type="email"], input[type="date"] {
+        padding: 10px;
+        margin: 5px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      /* Styling untuk tombol */
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 10px;
+      }
+      /* Styling untuk tombol ketika di-hover */
+      button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2 style="text-align: center">FORM REGISTRASI ATLET</h2>
+      <label for="name">Nama:</label>
+      <input type="text" id="name" name="name" placeholder="Masukkan Nama Anda">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Masukkan Email Anda">
+      <label for="country">Negara:</label>
+      <input type="text" id="country" name="country" placeholder="Masukkan Negara Asal Anda">
+      <label for="birthdate">Tanggal Lahir:</label>
+      <input type="date" id="birthdate" name="birthdate">
+      	<label for="play">Play:</label>
+      	<input type="radio" id="left" name="play" value="left">
+      	<label for="left">Left</label>
+      	<input type="radio" id="right" name="play" value="right">
+      	<label for="right">Right</label>
+	<br>
+      <label for="height">Tinggi Badan:</label>
+      <input type="text" id="height" name="height" placeholder="Masukkan Tinggi Badan Anda">
+      <label for="gender">Jenis Kelamin:</label>
+      <select id="gender" name="gender">
+        <option value="male">Laki-laki</option>
+        <option value="female">Perempuan</option>
+      </select>
+      <div style="text-align: center">
+        <button type="submit">Daftar</button>
+      </div>
+    </form>
+  </body>
+</html>
