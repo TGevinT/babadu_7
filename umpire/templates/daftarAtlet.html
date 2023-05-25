@@ -33,6 +33,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <button class="dashboard" onclick="window.location.href='/umpire/'">Dashboard</button>
+
           </li>
           <li class="nav-item">
             <button class="daftaratlet" onclick="window.location.href='daftaratlet'">Daftar Atlet</button>
@@ -59,86 +60,103 @@
     </div>
   </nav>
 
+  <div class="daftar">
+    <div class="hasilnya">
+      <h3>DAFTAR ATLET</h3>
 
-
-  <div class="card-container">
-      <div class="row">
-        <div class="card">
-            <div class="card-content">
-              <h3 class="card-title">Nama-nama event yang diikuti</h3>
-              <p class="card-text">Indonesia Open 2023</p>
-              <button class="card-btn">Baca Selengkapnya</button>
-            </div>
-        </div>
-
-        <div class="card">
-         
-          <div class="card-content">
-            <h3 class="card-title">Stadium</h3>
-            <p class="card-text">Istora Gelora Bung Karno (GBK) Senayan</p>
-            <button class="card-btn">Baca Selengkapnya</button>
-          </div>
-        </div>
-
-        <div class="card">
-         
-          <div class="card-content">
-            <h3 class="card-title">Hadiah</h3>
-            <p class="card-text">Rp 300.000.000,00</p>
-            <button class="card-btn">Baca Selengkapnya</button>
-          </div>
-        </div>
-
-        <div class="card">
-         
-          <div class="card-content">
-            <h3 class="card-title">Kategori Superseries</h3>
-            <p class="card-text">Super 1000</p>
-            <button class="card-btn">Baca Selengkapnya</button>
-          </div>
-        </div>
-
-
-        <div class="card">
-          <div class="card-content">
-            <h3 class="card-title">Tanggal Mulai</h3>
-            <p class="card-text">13 Juni 2023</p>
-            <button class="card-btn">Baca Selengkapnya</button>
-          </div>
-      </div>
-
-      <div class="card">
-       
-        <div class="card-content">
-          <h3 class="card-title">Tanggal Selesai</h3>
-          <p class="card-text">18 Juni 2023</p>
-          <button class="card-btn">Baca Selengkapnya</button>
-        </div>
-      </div>
-
-      <div class="card">
-       
-        <div class="card-content">
-          <h3 class="card-title">Kapasitas</h3>
-          <p class="card-text">2.000 orang</p>
-          <button class="card-btn">Baca Selengkapnya</button>
-        </div>
-      </div>
-
-      <div class="card-mulai">
-       
-        <div class="card-content">
-         
-          <button class="mulai-btn" onclick="window.location.href='pertandingan'">Mulai Permaianan</button>
-        </div>
-      </div>
+      <h5 class="atlet_kualifikasi">Atlet Kualifikasi</h5>
+      <table>
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Tanggal lahir</th>
+            <th>Negara Asal</th>
+            <th>Play Right</th>
+            <th>Height</th>
+            <th>World Tour Rank</th>
+            <th>Jenis Kelamin</th>
+            <th>Total Point</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in data1 %}
+          <tr>
+            <td>{{ data.1 }}</td>
+            <td>{{ data.2 }}</td>
+            <td>{{ data.3 }}</td>
+            <td>{{ data.4 }}</td>
+            <td>{{ data.5 }}</td>
+            <td>{{ data.6 }}</td>
+            <td>{{ data.7 }}</td>
+            <td>{{ data.8 }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
       
-      </div>
-
+      <h5>Atlet Non-Kualifikasi</h5>
+      <table>
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Negara Asal</th>
+            <th>Play Right</th>
+            <th>Height</th>
+            <th>World Rank</th>
+            <th>Jenis Kelamin</th>
+            <th>Total Point</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in data2 %}
+          <tr>
+            <td>{{ data.1 }}</td>
+            <td>{{ data.2 }}</td>
+            <td>{{ data.3 }}</td>
+            <td>{{ data.4 }}</td>
+            <td>{{ data.5 }}</td>
+            <td>{{ data.6 }}</td>
+            <td>{{ data.7 }}</td>
+            <td>{{ data.8 }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
       
-     
+      <h5>Atlet Ganda</h5>
+      <table>
+        <thead>
+          <tr>
+            <th>ID Atlet Ganda</th>
+            <th>Nama Atlet 1</th>
+            <th>Nama Atlet 2</th>
+            <th>Total Point</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in data3 %}
+          <tr>
+            <td>{{ data.0 }}</td>
+            <td>{{ data.1 }}</td>
+            <td>{{ data.2 }}</td>
+            <td>{{ data.3 }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+
+    </div>
+   
+  
+
+
 
   </div>
+
+
+
 
  
   {% block content %}
@@ -148,18 +166,22 @@
 
 </body>
 <style>
-  .daftaratlet, .event, .dashboard, .buttonz {
-background-color: #333;  /* Same color as the navbar background */
+.buttonz{
+  background-color: #994949;  /* Same color as the navbar background */
   color: rgb(166, 174, 207);  /* Text color for the button */
   border: none;  /* Remove border */
   padding: 10px 18px;  /* Adjust padding as needed */
   text-decoration: none;  /* Remove underline */
   font-size: 16px;  /* Adjust font size as needed */
 }
-
-.buttonz{
-  background-color: #994949;  /* Same color as the navbar background */
-  color: rgb(166, 174, 207);  /* Text color for the button */
+h5 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+.daftaratlet, .event, .dashboard {
+  background-color: #333;  /* Same color as the navbar background */ /* Text color for the button */
   border: none;  /* Remove border */
   padding: 10px 18px;  /* Adjust padding as needed */
   text-decoration: none;  /* Remove underline */
@@ -173,6 +195,25 @@ background-color: #333;  /* Same color as the navbar background */
   margin: auto;
   margin-top: 1cm;
 }
+
+table {
+  width: 60%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-size: smaller;
+}
+th, td {
+                padding: 5px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            th {
+                background-color: #38ae7d;
+                color: white;
+            }
 
 .card {
   background-color: #fff;
