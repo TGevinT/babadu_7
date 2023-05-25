@@ -123,7 +123,7 @@
         
         <div class="center-form">
         <form method="POST" action='daftar_event_lanjut/'>
-          <!-- {% csrf_token %} -->
+          {% csrf_token %} 
           <select name="stadium" id="stadium">
             {% for stadium in stadium_list %}
               <option value="{{ stadium.nama }}">{{ stadium.nama }}</option>
