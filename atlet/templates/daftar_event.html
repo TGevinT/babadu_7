@@ -22,7 +22,7 @@
             th, td {
                 padding: 5px;
                 text-align: left;
-                border-bottom: 1px solid #ddd;
+                border-bottom: 1px solid #000000;
             }
             th {
                 background-color: #38ae7d;
@@ -101,35 +101,59 @@
     </div>
   </nav>
         <h1>Daftar Event</h1>
-        <table border="1">
-            <thead>
+        <table >
                 <tr>
                     <th>Nama Stadium</th>
+                    <th>Lokasi</th>
                     <th>Negara</th>
                     <th>Kapasitas</th>
-                    <th></th>
                 </tr>
+                
+                {% for result in stadium_list %}
                 <tr>
-                    <td>GBK</td>
-                    <td>Indonesia</td>
-                    <td>8</td>
-                    <td> <a href="daftar_event_lanjut/" >pilih
-                    </a></td>
-                  </tr>
-                  <tr>
-                    <td>Senayan</td>
-                    <td>Indonesia</td>
-                    <td>16</td>
-                    <td> <a href="daftar_event_lanjut/" >pilih
-                      </a></td>
-                  </tr>
-            </thead>
+                    <td>{{result.nama}}</td>
+                    <td>{{result.alamat}}</td>
+                    <td>{{result.negara}}</td>
+                    <td>{{result.kapasitas}}</td>  
+                </tr>
+                {% endfor %}
             
         </table>
+        <br></br>
+        
+        <div class="center-form">
+        <form method="POST" action='daftar_event_lanjut/'>
+          {% csrf_token %}
+          <select name="stadium" id="stadium">
+            {% for stadium in stadium_list %}
+              <option value="{{ stadium.nama }}">{{ stadium.nama }}</option>
+            {% endfor %}
+          </select>
+          <button type="submit">Pilih</button>
+        </form> 
+        </div>
+
+        <!-- <form method="POST" action='daftar_event_lanjut'>
+          {% csrf_token %}
+          <select name="stadium" id="stadium">
+              {% for stadium in stadiums %}
+                  <option value="{{ stadium.nama }}">{{ stadium.nama }}</option>
+              {% endfor %}
+          </select>
+          <button type="submit">Show Events</button>
+      </form> -->
+      
         
     </body>
     <style>
-        .navbar {
+
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+   .navbar {
     overflow: hidden;
     background-color: #333;
     font-family: Arial;

@@ -103,22 +103,28 @@
       </div>
     </div>
   </nav>
-        <h1>Pilih Kategori</h1>
-        <h6 style="text-align: center;">Event: EventA</h6>
-        <h6 style="text-align: center;">Hadiah: Rp 5.000.000</h6>
-        <h6 style="text-align: center;"> Tanggal Mulai: 12-04-2023</h6>
-        <h6 style="text-align: center;">Tanggal Selesai: 15-04-2023</h6>
-        <h6 style="text-align: center;">Kategori: S200</h6>
-        <h6 style="text-align: center;">Kapasitas: 50/64</h6>
-        <h6 style="text-align: center;">Stadium: GBK</h6>
-        <h6 style="text-align: center;">Negara Indonesia</h6>
-        <table border="1">
+  <h1>Pilih Kategori</h1>
+
+  {% if partai_kompetisi_list %}
+  <h6 style="text-align: center;">Event: {{ partai_kompetisi_list.0.nama_event }}</h6>
+  <h6 style="text-align: center;">Hadiah: Rp{{ partai_kompetisi_list.0.total_hadiah }}</h6>
+  <h6 style="text-align: center;">Tanggal Mulai: {{ partai_kompetisi_list.0.tgl_mulai }}</h6>
+  <h6 style="text-align: center;">Tanggal Selesai: {{ partai_kompetisi_list.0.tgl_selesai }}</h6>
+  <h6 style="text-align: center;">Kategori: {{ partai_kompetisi_list.0.kategori_superseries }}</h6>
+  <h6 style="text-align: center;">Kapasitas: {{ partai_kompetisi_list.0.kapasitas }}</h6>
+  <h6 style="text-align: center;">Stadium: {{ partai_kompetisi_list.0.nama_stadium }}</h6>
+  <h6 style="text-align: center;">Negara: {{ partai_kompetisi_list.0.negara }}</h6>
+{% else %}
+  <p>No data available</p>
+{% endif %}
+       <table border="1">
             <thead>
                 <tr>
                     <th>Kategori</th>
                     <th>Partner</th>
-                    <th></th>
+                    <th>Kapasita</th>
                 </tr>
+                {% for result in partai_kompetisi_list %}
                 <tr>
                     <td>Tunggal Putra</td>
                     <td>-</td>
@@ -126,23 +132,8 @@
                         join
                       </a></td>
                   </tr>
-                  <tr>
-                    <td>Ganda Putra</td>
-                    <td><select><option >Sponsor 1</option>
-                        <option >Sponsor 2</option></select></td>
-                    <td> <a >
-                        join
-                      </a></td>
-                  </tr>
-
-                  <tr>
-                    <td>Ganda Campuran</td>
-                    <td><select><option >Sponsor 1</option>
-                        <option >Sponsor 2</option></select></td>
-                    <td> <a >
-                        join
-                      </a></td>
-                  </tr>
+                {% endfor %}
+                  
             </thead>
             
         </table>
