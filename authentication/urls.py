@@ -4,7 +4,8 @@ from authentication.views import *
 app_name = 'authentication'
 
 urlpatterns = [
-    path('dashboard-atlet', dashboard_atlet, name='dashboard-atlet'),
+   
+    path('', dashboard_atlet, name='dashboard-atlet'),
     path('dashboard-pelatih', dashboard_pelatih, name='dashboard-pelatih'),
     path('dashboard-umpire', dashboard_umpire, name='dashboard-umpire'),
     path('register-pengguna', register_pengguna, name='register-pengguna'),
