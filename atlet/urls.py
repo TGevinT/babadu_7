@@ -8,6 +8,7 @@ from atlet.views import daftar_sponsor
 from atlet.views import daftar_event
 from atlet.views import daftar_event_lanjut
 from atlet.views import daftar_partai
+from atlet.views import enrolled_event
 
 
 
@@ -23,4 +24,5 @@ urlpatterns = [
     path('daftar_event/', daftar_event, name='daftar_event'),
     path('daftar_event/daftar_event_lanjut/', daftar_event_lanjut, name='daftar_event_lanjut'),
     path('daftar_event/daftar_event_lanjut/pilih_kategori/', daftar_partai, name='pilih_kategori'),
+    path('daftar_event/daftar_event_lanjut/pilih_kategori/enrolled_event/', enrolled_event, name='enrolled_event')
 ]

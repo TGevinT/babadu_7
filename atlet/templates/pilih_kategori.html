@@ -117,23 +117,33 @@
 {% else %}
   <p>No data available</p>
 {% endif %}
+
        <table border="1">
             <thead>
                 <tr>
                     <th>Kategori</th>
                     <th>Partner</th>
-                    <th>Kapasita</th>
+                    <th></th>
+                    
                 </tr>
-                {% for result in partai_kompetisi_list %}
                 <tr>
-                    <td>Tunggal Putra</td>
+                    <td scope="row">Tunggal Putra</td>
                     <td>-</td>
-                    <td> <a >
-                        join
-                      </a></td>
+                    <td> <a href='enrolled_event.html' class="btn btn-outline-dark mr-3">Daftar</a></td>
                   </tr>
-                {% endfor %}
-                  
+                <tr>
+                    <td scope="row">Ganda Campuran</td>
+                    <td><select name="atlet" id="atlet">
+                    <option value="ratu">ratu</option>
+                    <option value="pantun">pantun</option>
+                    <option value="haha">haha</option>
+                    <option value="hihi">hihi</option>
+                    </select></td>
+                    
+                    <td> <a href='enrolled_event.html' class="btn btn-outline-dark mr-3">Daftar</a></td>
+                  </tr>
+                
+
             </thead>
             
         </table>

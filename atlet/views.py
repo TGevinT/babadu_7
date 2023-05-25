@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.db import connection
 from atlet.models import Atlet
 
+def enrolled_event(request):
+    return render(request, 'enrolled_event.html')
 
 def daftar_atlet(request):
 
