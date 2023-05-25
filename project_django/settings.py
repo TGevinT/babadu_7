@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'project_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'PASSWORD': 'ArrNQDbHCRz6STPGrB9B',
+        'HOST': 'containers-us-west-52.railway.app',
+        'PORT': '6677',
         'OPTIONS': {
             'options': '-c search_path=babadu',
         }
