@@ -121,7 +121,7 @@
         
         <div class="center-form">
         <form method="POST" action='pilih_kategori/'>
-          {% csrf_token %}
+          <!-- {% csrf_token %} -->
           <select name="event" id="event">
             {% for event in event_list %}
               <option value="{{ event.nama_event }}">{{ event.nama_event }}</option>
